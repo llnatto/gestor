@@ -14,7 +14,8 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="img/lxgx.png" class="img-thumbnail" width="80px" id="icon" alt="User Icon">
+      <br>
+      <img src="img/lxgx.png" class="rounded-circle" id="icon" alt="User Icon">
       <h3>Log in</h3>
     </div>
 
