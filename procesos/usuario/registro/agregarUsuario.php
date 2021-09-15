@@ -7,10 +7,10 @@
 	$fechaNacimiento = $fechaNacimiento[2] . "-" . $fechaNacimiento[1] . "-" . $fechaNacimiento[0];
 	$datos = array(
 				"nombre" => $_POST['nombre'], 
-			    "fechaNacimiento" => $fechaNacimiento, 
 			    "email" => $_POST['correo'], 
 			    "usuario" => $_POST['usuario'], 
-			    "password" => $password
+			    "password" => $password,
+				"fechaNacimiento" => $fechaNacimiento
 			);
 
 	$usuario = new Usuario();

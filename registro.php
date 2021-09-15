@@ -13,22 +13,41 @@
 		<h1 style="text-align: center;">Registro de usuario</h1>
 		<hr>
 		<div class="row">
-			<div class="col-sm-4"></div>
-			<div class="col-sm-4">
-				<form id="frmRegistro" method="post" onsubmit="return agregarUsuarioNuevo()" 
-				autocomplete="off">
-					<label>Nombre personal</label>
-					<input type="text" name="nombre" id="nombre" class="form-control" required="">
-					<label>Fecha de nacimiento</label>
-					<input type="text" name="fechaNacimiento" id="fechaNacimiento" class="form-control" required="" readonly="">
-					<label>Email o correo</label>
-					<input type="email" name="correo" id="correo" class="form-control" required="">
-					<label>Nombre de usuario</label>
-					<input type="text" name="usuario" id="usuario" class="form-control" required="">
-					<label>Password o contraseña</label>
-					<input type="password" name="password" id="password" class="form-control" required="">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<form id="frmRegistro" method="post" onsubmit="return agregarUsuarioNuevo()" autocomplete="off">
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Nombre</label>
+						<div class="col-sm-10">
+						<input type="text" class="form-control" name="nombre" id="nombre" required="">
+						</div>
+					</div>	
+					<div class="form-group row">
+						<label  class="col-sm-2 col-form-label">Email</label>
+						<div class="col-sm-10">
+						<input type="text" name="correo" id="email" class="form-control" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Usuario</label>
+						<div class="col-sm-10">
+						<input type="text" name="usuario" id="usuario" class="form-control" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Contraseña</label>
+						<div class="col-sm-10">
+						<input type="text" name="password" id="password" class="form-control" required="">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 col-form-label">Fecha de nacimiento</label>
+						<div class="col-sm-8">
+						<input type="text" class="form-control" name="fechaNacimiento" id="fechaNacimiento" required="" readonly="">
+						</div>
+					</div>
 					<br>
-					<div class="row">
+					<div class="form-group row">
 						<div class="col-sm-6 text-left" >
 							<button class="btn btn-primary">Registrar</button>
 						</div>
@@ -38,7 +57,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-sm-4"></div>
+			<div class="col-sm-3"></div>
 		</div>
 	</div>
 	<script src="librerias/jquery-3.4.1.min.js"></script>
