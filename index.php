@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="librerias/bootstrap4/bootstrap.min.css">
