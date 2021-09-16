@@ -12,7 +12,7 @@
 		    <div class="row">
 		    	<div class="col-sm-4">
 		    		<span class="btn btn-primary" data-toggle="modal" data-target="#modalAgregaCategoria">
-		    			 <span class="fas fa-plus-circle"></span> Agregar nueva categoria
+		    			 <span class="fas fa-plus-circle"></span> Agregar categoria
 		    		</span>
 		    	</div>
 		    </div>
@@ -32,7 +32,7 @@
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar nueva categoría</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agrega categoría</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

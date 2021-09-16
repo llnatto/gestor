@@ -47,7 +47,7 @@
                
                 respuesta = respuesta.trim();
                 if (respuesta == 1) {
-                    window.location = "vistas/inicio.php";
+                    window.location = "vistas/categorias.php";
                 } else {
                     swal(":(", "Fallo al entrar!", "error");
                 }

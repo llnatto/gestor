@@ -40,7 +40,8 @@
 							<div class="form-group row">
 								<label class="col-sm-2 col-form-label">Contraseña</label>
 								<div class="col-sm-10">
-								<input type="text" name="password" id="password" class="form-control" required="">
+								
+								<input type="password" name="password" id="password" class="form-control" required="">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -84,6 +85,10 @@
 		        dateFormat: "dd-mm-yy"
 		    });
 		});
+
+		function comprobar_email($password) {
+   			 return (filter_var($password, FILTER_VALIDATE_EMAIL)) ? 1 : 0;
+		}
 
 
 		function agregarUsuarioNuevo() {
