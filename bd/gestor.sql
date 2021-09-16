@@ -23,31 +23,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `t_usuarios`
+--
+
+CREATE TABLE `t_usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `email` varchar(245) DEFAULT NULL,
+  `password` text DEFAULT NULL,
+  `administrador` SMALLINT NOT NULL,
+  `insert` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
 -- Estructura de tabla para la tabla `t_archivos`
 --
 
 CREATE TABLE `t_archivos` (
   `id_archivo` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_categoria` int(11) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   `ruta` text DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_categoria` int(11) DEFAULT NULL,
   `fecha` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `t_archivos`
---
-
-INSERT INTO `t_archivos` (`id_archivo`, `id_usuario`, `id_categoria`, `nombre`, `tipo`, `ruta`, `fecha`) VALUES
-(8, 12, 7, 'estreno curso.png', 'png', '../../archivos/12/estreno curso.png', '2020-03-02 22:51:10'),
-(9, 12, 7, 'logo.png', 'png', '../../archivos/12/logo.png', '2020-03-02 22:51:10'),
-(10, 12, 7, 'gestor de archivos documentacion.pdf', 'pdf', '../../archivos/12/gestor de archivos documentacion.pdf', '2020-03-02 22:51:35'),
-(11, 12, 7, 'facultad.mp4', 'mp4', '../../archivos/12/facultad.mp4', '2020-03-02 23:36:42'),
-(12, 12, 8, 'Beethoven Virus.mp3', 'mp3', '../../archivos/12/Beethoven Virus.mp3', '2020-03-02 23:41:13');
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `t_categorias`
@@ -55,41 +55,14 @@ INSERT INTO `t_archivos` (`id_archivo`, `id_usuario`, `id_categoria`, `nombre`, 
 
 CREATE TABLE `t_categorias` (
   `id_categoria` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `t_categorias`
---
 
-INSERT INTO `t_categorias` (`id_categoria`, `id_usuario`, `nombre`, `fechaInsert`) VALUES
-(7, 12, 'Gestor de Archivos', '2020-03-02 22:49:22'),
-(8, 12, 'Música Clásica ', '2020-03-02 23:39:43');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `t_usuarios`
---
-
-CREATE TABLE `t_usuarios` (
-  `id_usuario` int(11) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `fechaNacimiento` date DEFAULT NULL,
-  `email` varchar(245) DEFAULT NULL,
-  `usuario` varchar(245) DEFAULT NULL,
-  `password` text DEFAULT NULL,
-  `insert` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `t_usuarios`
---
-
-INSERT INTO `t_usuarios` (`id_usuario`, `nombre`, `fechaNacimiento`, `email`, `usuario`, `password`, `insert`) VALUES
-(12, 'FIME', '2019-12-05', 'facultad@gmail.com', 'facultad', 'f3773f4f53e9647ec64aafd8d2e606a6649882cf', '2019-12-05 15:29:04');
+INSERT INTO `t_usuarios` (`id_usuario`, `email`, `password`, `administrador`, `insert`) VALUES
+(12, 'admin@gmail.com', 'f3773f4f53e9647ec64aafd8d2e606a6649882cf', 1, '2019-12-05 15:29:04');
 
 --
 -- Índices para tablas volcadas

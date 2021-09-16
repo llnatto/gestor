@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="../librerias/datatable/dataTables.bootstrap4.min.css">
 </head>
-<body style="background-color: #fffff">
+<body style="background-color:white">
 
 
 	<!-- Navigation -->
