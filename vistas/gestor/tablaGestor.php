@@ -48,7 +48,7 @@
 						Arreglo de extensiones validas
 					*/
 
-					$extensionesValidas = array('png', 'jpg', 'pdf', 'mp3', 'mp4');
+					$extensionesValidas = array('png', 'jpg', 'pdf', 'mp3', 'mp4', 'docx');
 
 					while($mostrar = mysqli_fetch_array($result)) { 
 
