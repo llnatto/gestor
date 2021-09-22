@@ -79,6 +79,12 @@
 				case 'mp4':
 					return '<video src="'.$ruta.'" controls width="100%" height="600px"></video>';
 					break;
+				case 'docx':
+					header("content-type: application/docx");
+					readfile($ruta);
+					return '<iframe src="http://docs.google.com/viewer?url='.$ruta.'&embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>';
+						
+						break;
 				
 				default:
 					# code...
