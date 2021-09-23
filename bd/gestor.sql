@@ -23,16 +23,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `t_usuarios`
+--
+
+CREATE TABLE `t_usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `email` varchar(245) DEFAULT NULL,
+  `password` text DEFAULT NULL,
+  `administrador` SMALLINT NOT NULL,
+  `insert` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
 -- Estructura de tabla para la tabla `t_archivos`
 --
 
 CREATE TABLE `t_archivos` (
   `id_archivo` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_categoria` int(11) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   `ruta` text DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_categoria` int(11) DEFAULT NULL,
   `fecha` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -45,7 +57,6 @@ CREATE TABLE `t_archivos` (
 
 CREATE TABLE `t_categorias` (
   `id_categoria` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -59,12 +70,7 @@ CREATE TABLE `t_categorias` (
 
 CREATE TABLE `t_usuarios` (
   `id_usuario` int(11) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL,
-  `fechaNacimiento` date DEFAULT NULL,
-  `email` varchar(245) DEFAULT NULL,
-  `usuario` varchar(245) DEFAULT NULL,
-  `password` text DEFAULT NULL,
-  `insert` datetime NOT NULL DEFAULT current_timestamp()
+  `fechaInsert` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
