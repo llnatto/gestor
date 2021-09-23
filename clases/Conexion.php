@@ -3,8 +3,8 @@
 	class Conectar{
 		public function conexion() {
 			$servidor = "localhost";
-			$usuario = "root";
-			$password = "";
+			$usuario = "natto";
+			$password = "U;9o3PqP0;Dw7a";
 			$base = "gestor";
 
 			$conexion = mysqli_connect($servidor, 
